@@ -1,0 +1,1 @@
+export { CollaborationCard } from './CollaborationCard'

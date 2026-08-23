@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #F9F6F0;
+  --color-canvas-subtle: #F2ECE1;
+  --color-canvas-muted: #EBE4D6;
+  --color-surface: #FDFCFA;
+  --color-surface-card: #FFFFFF;
+  --color-surface-muted: #EFE9DF;
+  --color-surface-dark: #181512;
+  --color-surface-dark-card: #201C18;
+  --color-surface-dark-border: #2D2722;
+  
+  --color-primary: #181512;
+  --color-primary-dark: #0A0908;
+  --color-accent: #E05326;
+  --color-accent-hover: #C94318;
+  --color-accent-light: #FDF2EE;
+  --color-accent-border: #F6C1AF;
+  
+  --color-secondary: #06B6D4;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-error: #DC2626;
+  
+  --color-border-warm: #E5DFD5;
+  --color-border-warm-hover: #C5BCAD;
+  --color-border-warm-dark: #332C26;
+
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Newsreader', 'Georgia', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+:root {
+  --background: #F9F6F0;
+  --surface: #FDFCFA;
+  --text-primary: #1C1917;
+  --text-muted: #78716C;
+  --accent: #E05326;
+}
+
+/* Base styles */
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background-color: #F8D7CD;
+  color: #181512;
+}
+
+/* Card hover glow / lift */
+.editorial-card {
+  background-color: #FDFCFA;
+  border: 1px solid #E5DFD5;
+  border-radius: 1rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(28, 25, 23, 0.03);
+}
+
+.editorial-card:hover {
+  border-color: #C5BCAD;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(28, 25, 23, 0.07);
+}
+
+/* Editorial pill tag */
+.editorial-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #EFE9DF;
+  color: #44403C;
+  border: 1px solid #E2DAD0;
+  transition: all 0.15s ease;
+}
+
+.editorial-tag:hover {
+  border-color: #A8A29E;
+  color: #1C1917;
+}
+
+/* Status badge */
+.editorial-badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: rgba(224, 83, 38, 0.08);
+  color: #E05326;
+  border: 1px solid rgba(224, 83, 38, 0.3);
+}
