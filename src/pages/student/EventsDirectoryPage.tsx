@@ -143,7 +143,7 @@ export function EventsDirectoryPage() {
         </div>
 
         {/* Event Type Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none justify-start sm:justify-center">
+        <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
           {EVENT_TYPES.map((type) => {
             const isSelected = selectedType === type.id
             return (
@@ -163,17 +163,17 @@ export function EventsDirectoryPage() {
         </div>
 
         {/* Category Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none justify-start sm:justify-center">
+        <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
           {categories.map((cat) => {
             const isSelected = selectedCategory === cat
             return (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1 rounded-full text-[11px] font-medium whitespace-nowrap transition-all cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                   isSelected
                     ? 'bg-[#E05326] text-white shadow-xs'
-                    : 'bg-[#F2ECE1] text-stone-600 border border-[#E5DFD5] hover:bg-[#EFE9DF]'
+                    : 'bg-[#F2ECE1] text-stone-700 border border-[#E5DFD5] hover:bg-[#EFE9DF] hover:text-stone-950'
                 }`}
               >
                 {cat}

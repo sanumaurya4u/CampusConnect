@@ -111,7 +111,7 @@ export function ClubDirectoryPage() {
         </div>
 
         {/* Category Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none justify-start sm:justify-center">
+        <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
           {categories.map((cat) => {
             const isSelected = selectedCategory === cat
             return (

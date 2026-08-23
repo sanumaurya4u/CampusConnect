@@ -237,9 +237,10 @@ export function AdminDashboard() {
         <div className="flex items-center gap-3 relative z-10">
           <Button
             size="sm"
+            variant="accent"
             onClick={() => setIsCreateClubModalOpen(true)}
             leftIcon={<Plus className="h-4 w-4" />}
-            className="bg-white text-[#181512] hover:bg-stone-200 border-white font-semibold"
+            className="font-semibold shadow-sm"
           >
             Provision Society
           </Button>
@@ -687,11 +688,11 @@ export function AdminDashboard() {
           />
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Category</label>
+            <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1.5 font-mono">Category</label>
             <select
               value={newClubCategory}
               onChange={(e) => setNewClubCategory(e.target.value)}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary/30"
+              className="w-full px-4 py-2.5 rounded-xl border border-[#DCD5C9] bg-[#FDFCFA] text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-[#181512]/15 focus:border-[#181512] transition-all cursor-pointer"
             >
               {CLUB_CATEGORIES.map((c) => (
                 <option key={c} value={c}>
@@ -710,25 +711,25 @@ export function AdminDashboard() {
           />
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Description</label>
+            <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1.5 font-mono">Description</label>
             <textarea
               rows={3}
               placeholder="Overview of the society's mission and technical domain..."
               value={newClubDescription}
               onChange={(e) => setNewClubDescription(e.target.value)}
               required
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary/30"
+              className="w-full px-4 py-2.5 rounded-xl border border-[#DCD5C9] bg-[#FDFCFA] text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#181512]/15 focus:border-[#181512] transition-all resize-none"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Objective</label>
+            <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1.5 font-mono">Objective</label>
             <textarea
               rows={2}
               placeholder="Core mission and goals for student members..."
               value={newClubObjective}
               onChange={(e) => setNewClubObjective(e.target.value)}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary/30"
+              className="w-full px-4 py-2.5 rounded-xl border border-[#DCD5C9] bg-[#FDFCFA] text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#181512]/15 focus:border-[#181512] transition-all resize-none"
             />
           </div>
 
@@ -770,12 +771,12 @@ export function AdminDashboard() {
           />
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">Description</label>
+            <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-1.5 font-mono">Description</label>
             <textarea
               rows={3}
               value={editClubDesc}
               onChange={(e) => setEditClubDesc(e.target.value)}
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary/30"
+              className="w-full px-4 py-2.5 rounded-xl border border-[#DCD5C9] bg-[#FDFCFA] text-sm text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-[#181512]/15 focus:border-[#181512] transition-all resize-none"
             />
           </div>
 
